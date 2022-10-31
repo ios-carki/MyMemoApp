@@ -9,9 +9,10 @@ import UIKit
 
 import RealmSwift
 
-class MemoMainViewController: BaseViewController {
+final class MemoMainViewController: BaseViewController {
     
     let mainView = MemoMainView()
+    let viewModel = MainViewModel()
     
     let localRealm = try! Realm()
     var tasks: Results<Memo>! {
@@ -19,15 +20,6 @@ class MemoMainViewController: BaseViewController {
             mainView.tableView.reloadData()
         }
     }
-    
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.locale = Locale.current
-        formatter.timeZone = TimeZone.current
-        formatter.dateFormat = "yyyy년 MM월 dd일"
-        
-        return formatter
-    }()
     
     override func loadView() {
         view = mainView
@@ -40,8 +32,12 @@ class MemoMainViewController: BaseViewController {
         
         tableSetting()
         startWirte()
-        fetchRealm()
+        viewModel.fetchRealm()//fetchRealm()
         naviSetting()
+        
+        viewModel.tasks.bind { vlaue in
+            self.mainView.tableView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,12 +60,14 @@ class MemoMainViewController: BaseViewController {
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
-        self.title = "\(tasks.count)개의 메모"
+        //self.title = "\(tasks.count)개의 메모"
+        self.title = "\((viewModel.tasks.value?.count)!)" + "개의 메모"
     }
-    
+    /*
     func fetchRealm() {
         tasks = localRealm.objects(Memo.self).sorted(byKeyPath: "regDate", ascending: true)
     }
+    */
     
     func startWirte() {
         mainView.testButton.addTarget(self, action: #selector(writeButtonClicked), for: .touchUpInside)
@@ -96,23 +94,26 @@ extension MemoMainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return tasks.count
+        //return tasks.count
+        return (viewModel.tasks.value?.count)!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = MemoWriteViewController()
         
         //vc.mainView.saveButton.setTitle("수정하기", for: .normal)
-        vc.mainView.mainTextView.text = "\(tasks[indexPath.row].title)" + "\n" + "\(tasks[indexPath.row].detail)"
+        //vc.mainView.mainTextView.text = "\(tasks[indexPath.row].title)" + "\n" + "\(tasks[indexPath.row].detail)"
+        vc.mainView.mainTextView.text = "\(viewModel.tasks.value![indexPath.row].title)" + "\n" + "\(viewModel.tasks.value![indexPath.row].detail)"
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "Cell")
-        cell.textLabel?.text = tasks[indexPath.row].title
-        cell.detailTextLabel?.text = "\(tasks[indexPath.row].detail)" + " - " + "\(dateFormatter.string(from: tasks[indexPath.row].regDate))" + "에 작성됨."
-        print(cell.detailTextLabel?.text)
+//        cell.textLabel?.text = tasks[indexPath.row].title
+//        cell.detailTextLabel?.text = "\(tasks[indexPath.row].detail)" + " - " + "\(viewModel.dateFormatter.string(from: tasks[indexPath.row].regDate))" + "에 작성됨."
+        cell.textLabel?.text = viewModel.tasks.value![indexPath.row].title
+        cell.detailTextLabel?.text = "\(viewModel.tasks.value![indexPath.row].detail)" + " - " + "\(viewModel.dateFormatter.string(from: viewModel.tasks.value![indexPath.row].regDate))" // tasks[indexPath.row].regDate))" + "에 작성됨."
         
         return cell
     }
