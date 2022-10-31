@@ -5,7 +5,7 @@
 //  Created by Carki on 2022/10/31.
 //
 
-import UIKit
+import Foundation
 
 import RealmSwift
 

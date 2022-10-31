@@ -14,13 +14,6 @@ final class MemoMainViewController: BaseViewController {
     let mainView = MemoMainView()
     let viewModel = MainViewModel()
     
-    let localRealm = try! Realm()
-    var tasks: Results<Memo>! {
-        didSet {
-            mainView.tableView.reloadData()
-        }
-    }
-    
     override func loadView() {
         view = mainView
         view.backgroundColor = .white
@@ -28,7 +21,7 @@ final class MemoMainViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Realm is located at:", localRealm.configuration.fileURL!)
+        print("Realm is located at:", viewModel.localRealm.configuration.fileURL!)
         
         tableSetting()
         startWirte()
@@ -105,7 +98,7 @@ extension MemoMainViewController: UITableViewDelegate, UITableViewDataSource {
         //vc.mainView.mainTextView.text = "\(tasks[indexPath.row].title)" + "\n" + "\(tasks[indexPath.row].detail)"
         
         //"\(viewModel.tasks.value![indexPath.row].title)" + "\n" + "\(viewModel.tasks.value![indexPath.row].detail)" => 바인딩
-        vc.mainView.mainTextView.text = "\(viewModel.tasks.value?[indexPath.row].title)" + "\n" + "\(viewModel.tasks.value?[indexPath.row].detail)"
+        vc.mainView.mainTextView.text = "\(viewModel.tasks.value?[indexPath.row].title ?? "")" + "\n" + "\(viewModel.tasks.value?[indexPath.row].detail ?? "")"
         navigationController?.pushViewController(vc, animated: true)
     }
     

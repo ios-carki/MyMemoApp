@@ -12,6 +12,7 @@ import RealmSwift
 class MemoWriteViewController: BaseViewController {
     
     let mainView = MemoWriteView()
+    let viewModel = WriteViewModel()
     
     let localRealm = try! Realm()
     
@@ -25,6 +26,9 @@ class MemoWriteViewController: BaseViewController {
         
         saveButtonClikced()
         naviSetting()
+        viewModel.realmData.bind { value in
+            
+        }
     }
     
     func naviSetting() {
@@ -64,11 +68,14 @@ class MemoWriteViewController: BaseViewController {
         
         let task = Memo(title: String(memoTitle), detail: String(memoDetail), regDate: Date())
         
-        try! localRealm.write {
-            localRealm.add(task)
-            print("저장완료")
-            self.navigationController?.popViewController(animated: true)
-        }
+//        try! localRealm.write {
+//            localRealm.add(task)
+//            print("저장완료")
+//            self.navigationController?.popViewController(animated: true)
+//        }
+        viewModel.writeDate(data: task)
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     
