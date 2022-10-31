@@ -9,21 +9,44 @@
 /* Begin PBXBuildFile section */
 		C371BFDE290FF358001772FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371BFDD290FF358001772FB /* AppDelegate.swift */; };
 		C371BFE0290FF358001772FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371BFDF290FF358001772FB /* SceneDelegate.swift */; };
-		C371BFE2290FF358001772FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371BFE1290FF358001772FB /* ViewController.swift */; };
 		C371BFE5290FF358001772FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C371BFE3290FF358001772FB /* Main.storyboard */; };
 		C371BFE7290FF359001772FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C371BFE6290FF359001772FB /* Assets.xcassets */; };
 		C371BFEA290FF359001772FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C371BFE8290FF359001772FB /* LaunchScreen.storyboard */; };
+		C371BFF8290FF3C3001772FB /* Explan in Resources */ = {isa = PBXBuildFile; fileRef = C371BFF7290FF3C3001772FB /* Explan */; };
+		C371BFFA290FF3E8001772FB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371BFF9290FF3E8001772FB /* BaseView.swift */; };
+		C371BFFC290FF3F5001772FB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371BFFB290FF3F5001772FB /* BaseViewController.swift */; };
+		C371BFFF290FF413001772FB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C371BFFE290FF413001772FB /* SnapKit */; };
+		C371C002290FF443001772FB /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C371C001290FF443001772FB /* Realm */; };
+		C371C004290FF443001772FB /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C371C003290FF443001772FB /* RealmSwift */; };
+		C371C006290FF6BF001772FB /* MemoMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371C005290FF6BF001772FB /* MemoMainViewController.swift */; };
+		C371C008290FF6C6001772FB /* MemoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371C007290FF6C6001772FB /* MemoMainView.swift */; };
+		C371C00A290FF77C001772FB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371C009290FF77C001772FB /* Observable.swift */; };
+		C371C00C290FF79A001772FB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371C00B290FF79A001772FB /* MainViewModel.swift */; };
+		C371C00E290FF7A0001772FB /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371C00D290FF79F001772FB /* WriteViewModel.swift */; };
+		C371C010290FF7C3001772FB /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371C00F290FF7C3001772FB /* Memo.swift */; };
+		C371C012290FFAEA001772FB /* MemoWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371C011290FFAEA001772FB /* MemoWriteView.swift */; };
+		C371C014290FFAF1001772FB /* MemoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C371C013290FFAF1001772FB /* MemoWriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C371BFDA290FF358001772FB /* MyMemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C371BFDD290FF358001772FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C371BFDF290FF358001772FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C371BFE1290FF358001772FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C371BFE4290FF358001772FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C371BFE6290FF359001772FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C371BFE9290FF359001772FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C371BFEB290FF359001772FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C371BFF7290FF3C3001772FB /* Explan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Explan; sourceTree = "<group>"; };
+		C371BFF9290FF3E8001772FB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		C371BFFB290FF3F5001772FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C371C005290FF6BF001772FB /* MemoMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoMainViewController.swift; sourceTree = "<group>"; };
+		C371C007290FF6C6001772FB /* MemoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoMainView.swift; sourceTree = "<group>"; };
+		C371C009290FF77C001772FB /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		C371C00B290FF79A001772FB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		C371C00D290FF79F001772FB /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
+		C371C00F290FF7C3001772FB /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		C371C011290FFAEA001772FB /* MemoWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteView.swift; sourceTree = "<group>"; };
+		C371C013290FFAF1001772FB /* MemoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C371C004290FF443001772FB /* RealmSwift in Frameworks */,
+				C371C002290FF443001772FB /* Realm in Frameworks */,
+				C371BFFF290FF413001772FB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +82,65 @@
 		C371BFDC290FF358001772FB /* MyMemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				C371BFF6290FF390001772FB /* Realm */,
+				C371BFF5290FF388001772FB /* Utility */,
+				C371BFF4290FF37E001772FB /* ViewModel */,
+				C371BFF3290FF379001772FB /* View */,
+				C371BFF1290FF36B001772FB /* Model */,
 				C371BFDD290FF358001772FB /* AppDelegate.swift */,
 				C371BFDF290FF358001772FB /* SceneDelegate.swift */,
-				C371BFE1290FF358001772FB /* ViewController.swift */,
 				C371BFE3290FF358001772FB /* Main.storyboard */,
 				C371BFE6290FF359001772FB /* Assets.xcassets */,
 				C371BFE8290FF359001772FB /* LaunchScreen.storyboard */,
 				C371BFEB290FF359001772FB /* Info.plist */,
+				C371BFF7290FF3C3001772FB /* Explan */,
 			);
 			path = MyMemoApp;
+			sourceTree = "<group>";
+		};
+		C371BFF1290FF36B001772FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C371BFF3290FF379001772FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C371BFF9290FF3E8001772FB /* BaseView.swift */,
+				C371BFFB290FF3F5001772FB /* BaseViewController.swift */,
+				C371C005290FF6BF001772FB /* MemoMainViewController.swift */,
+				C371C007290FF6C6001772FB /* MemoMainView.swift */,
+				C371C011290FFAEA001772FB /* MemoWriteView.swift */,
+				C371C013290FFAF1001772FB /* MemoWriteViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C371BFF4290FF37E001772FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C371C00B290FF79A001772FB /* MainViewModel.swift */,
+				C371C00D290FF79F001772FB /* WriteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C371BFF5290FF388001772FB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C371C009290FF77C001772FB /* Observable.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C371BFF6290FF390001772FB /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				C371C00F290FF7C3001772FB /* Memo.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +159,11 @@
 			dependencies = (
 			);
 			name = MyMemoApp;
+			packageProductDependencies = (
+				C371BFFE290FF413001772FB /* SnapKit */,
+				C371C001290FF443001772FB /* Realm */,
+				C371C003290FF443001772FB /* RealmSwift */,
+			);
 			productName = MyMemoApp;
 			productReference = C371BFDA290FF358001772FB /* MyMemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +192,10 @@
 				Base,
 			);
 			mainGroup = C371BFD1290FF358001772FB;
+			packageReferences = (
+				C371BFFD290FF413001772FB /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C371C000290FF443001772FB /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = C371BFDB290FF358001772FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +212,7 @@
 			files = (
 				C371BFEA290FF359001772FB /* LaunchScreen.storyboard in Resources */,
 				C371BFE7290FF359001772FB /* Assets.xcassets in Resources */,
+				C371BFF8290FF3C3001772FB /* Explan in Resources */,
 				C371BFE5290FF358001772FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +224,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C371BFE2290FF358001772FB /* ViewController.swift in Sources */,
+				C371C00E290FF7A0001772FB /* WriteViewModel.swift in Sources */,
+				C371BFFA290FF3E8001772FB /* BaseView.swift in Sources */,
+				C371BFFC290FF3F5001772FB /* BaseViewController.swift in Sources */,
+				C371C006290FF6BF001772FB /* MemoMainViewController.swift in Sources */,
+				C371C014290FFAF1001772FB /* MemoWriteViewController.swift in Sources */,
+				C371C00A290FF77C001772FB /* Observable.swift in Sources */,
 				C371BFDE290FF358001772FB /* AppDelegate.swift in Sources */,
 				C371BFE0290FF358001772FB /* SceneDelegate.swift in Sources */,
+				C371C012290FFAEA001772FB /* MemoWriteView.swift in Sources */,
+				C371C008290FF6C6001772FB /* MemoMainView.swift in Sources */,
+				C371C00C290FF79A001772FB /* MainViewModel.swift in Sources */,
+				C371C010290FF7C3001772FB /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +453,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C371BFFD290FF413001772FB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C371C000290FF443001772FB /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C371BFFE290FF413001772FB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C371BFFD290FF413001772FB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C371C001290FF443001772FB /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C371C000290FF443001772FB /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		C371C003290FF443001772FB /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C371C000290FF443001772FB /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C371BFD2290FF358001772FB /* Project object */;
 }

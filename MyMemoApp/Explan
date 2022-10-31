@@ -1,0 +1,6 @@
+메모앱 리빌드
+
+1.일단 MVC로 짜볼 것.
+2.MVC로 구성 다 끝나면 -> WriteView부터 MVVM으로 구성해보기
+3.MainView MVVM
+4.코드 리펙토링
