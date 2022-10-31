@@ -95,7 +95,7 @@ extension MemoMainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //return tasks.count
-        return (viewModel.tasks.value?.count)!
+        return viewModel.tasks.value?.count ?? 0 // (viewModel.tasks.value?.count)! -> 바인딩
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -103,7 +103,9 @@ extension MemoMainViewController: UITableViewDelegate, UITableViewDataSource {
         
         //vc.mainView.saveButton.setTitle("수정하기", for: .normal)
         //vc.mainView.mainTextView.text = "\(tasks[indexPath.row].title)" + "\n" + "\(tasks[indexPath.row].detail)"
-        vc.mainView.mainTextView.text = "\(viewModel.tasks.value![indexPath.row].title)" + "\n" + "\(viewModel.tasks.value![indexPath.row].detail)"
+        
+        //"\(viewModel.tasks.value![indexPath.row].title)" + "\n" + "\(viewModel.tasks.value![indexPath.row].detail)" => 바인딩
+        vc.mainView.mainTextView.text = "\(viewModel.tasks.value?[indexPath.row].title)" + "\n" + "\(viewModel.tasks.value?[indexPath.row].detail)"
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -112,8 +114,8 @@ extension MemoMainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "Cell")
 //        cell.textLabel?.text = tasks[indexPath.row].title
 //        cell.detailTextLabel?.text = "\(tasks[indexPath.row].detail)" + " - " + "\(viewModel.dateFormatter.string(from: tasks[indexPath.row].regDate))" + "에 작성됨."
-        cell.textLabel?.text = viewModel.tasks.value![indexPath.row].title
-        cell.detailTextLabel?.text = "\(viewModel.tasks.value![indexPath.row].detail)" + " - " + "\(viewModel.dateFormatter.string(from: viewModel.tasks.value![indexPath.row].regDate))" // tasks[indexPath.row].regDate))" + "에 작성됨."
+        cell.textLabel?.text = viewModel.tasks.value?[indexPath.row].title
+        cell.detailTextLabel?.text = "\(viewModel.tasks.value?[indexPath.row].detail ?? "")" + " - " + "\(viewModel.dateFormatter.string(from: viewModel.tasks.value?[indexPath.row].regDate ?? Date()))" // tasks[indexPath.row].regDate))" + "에 작성됨."
         
         return cell
     }
